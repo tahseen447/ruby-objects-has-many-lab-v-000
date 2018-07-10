@@ -7,14 +7,14 @@ class Author
   end
 
   def add_post(post)
-    self.posts << post
+    @posts << post
     post.author = self
   end
 
   def add_post_by_title(title)
     new_post = Post.new(title)
     new_post.author = self
-    self.posts << new_post
+    @posts << new_post
   end
 
   def posts
@@ -22,6 +22,6 @@ class Author
   end
 
   def self.post_count
-    puts "#{@posts.inspect}"
+    Post.all.count
   end
 end
