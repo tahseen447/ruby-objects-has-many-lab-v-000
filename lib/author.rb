@@ -17,14 +17,11 @@ class Author
   end
 
   def posts
-<<<<<<< HEAD
    @posts
   end
 
   def self.post_count
     Post.all.count
-=======
-    @posts
   end
 
   def self.post_count
